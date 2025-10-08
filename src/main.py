@@ -122,7 +122,7 @@ def play_song(song):
             current = player.get_time()
             progress = min(current / total, 1.0)
 
-            bar_width = width - 70 - len(song['full_title'])
+            bar_width = width - 60 - len(song['full_title'])
             filled = int(progress * bar_width)
             bar = "=" * filled + " " * (bar_width - filled)
             progress_text = f"[{bar}] {int(progress*100):3d}% | {format_time(current)}/{format_time(total)} | {song['full_title']}"
